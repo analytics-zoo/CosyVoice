@@ -28,7 +28,7 @@ transformers==4.51.3
 uvicorn==0.30.0
 wetext==0.1.2
 wget==3.2
-x-transformers==1.27.13
+x-transformers==1.27.14
 ruamel.yaml==0.17.40
 HyperPyYAML==1.2.2
 torchcodec
