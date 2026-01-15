@@ -410,7 +410,7 @@ if __name__ == '__main__':
     with open('./pretrained_models/Fun-CosyVoice3-0.5B/cosyvoice3.yaml', 'r') as f:
         configs = load_hyperpyyaml(f, overrides={'llm': None, 'hift': None})
     model = configs['flow']
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'xpu' if torch.xpu.is_available() else 'cpu'
     model.to(device)
     model.eval()
     max_len = 10 * model.decoder.estimator.static_chunk_size
